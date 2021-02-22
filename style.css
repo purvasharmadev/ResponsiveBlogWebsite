@@ -1,13 +1,90 @@
+body{
+    margin: 0;
+    font-family:'Ubuntu',sans-serif;
+    box-sizing:border-box;
+    font-weight: 300;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+header{
+    text-align: center;
+    background:#f8f8f8;
+    padding:2em 0 ;
+}
+h1,h2,h3{
+    font-family: 'Lora',serif;
+    font-weight: 400;
+    color: #143774;
+  }
+h1{
+    font-size:2rem;
+    margin: 0;
+}
+.subtitle{
+    font-weight: 200;
+    color:#1792d2 ;
+    font-size: 0.75rem;
+    }
+
 /* TYPOGRAPHY */
 .article-title{
     font-size: 1.5rem;
 }
-.article-info{
-
-}
-.article-body{
-
+.article-read-more,.article-info{
+    font-size: .875rem;
 }
 .article-read-more{
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: ;
+}
 
+.article-read-more:hover,
+.article-read-more:focus{
+    color: #142774;
+    text-decoration: underline;
+}
+/* Layout */
+/* Step -1 : See the big picture
+ Step-2 : Break the page in differnt sections i.e Components
+ Step-3: style big components first then the small components
+
+*/
+
+.container{
+    margin: 0 auto;
+    width:90% ;
+    max-width: 900px;
+    /* border: 2px yellow solid; */
+}
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px dotted darkslateblue; */
+}
+/* main {
+    width: 75%;
+}
+aside {
+    width: 25%;
+} */
+
+
+/* Media Queiries */
+
+@media screen and (min-width:675px){
+    .container-flex{
+        flex-direction: row;
+        /* text-align: center; */
+
+    }
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
 }
