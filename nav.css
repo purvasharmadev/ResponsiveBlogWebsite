@@ -1,13 +1,14 @@
-
     
 nav ul{
     list-style: none;
     display: flex;
+    /* flex-direction: column; */
     padding: 0;
     justify-content: center;
 }
 nav li{
-    margin: 0 1em;
+    /* margin: 0 1em; */
+    margin-left: 2em;
 }
 nav a{
     text-decoration: none;
@@ -33,14 +34,13 @@ nav a:focus
 }
 
 .nav-head{
-    text-align: center;
     font-size: 1.5rem;
     color:#312614 ;
 }
 /* Side by Side NavBar */
 
 .side-nav-head{
-    text-align: left;
+    text-align: center;
 }
 .side-nav-head h1,.subtitle{
     margin: 0%;
@@ -50,8 +50,6 @@ nav a:focus
 @media screen and (max-width:675px){
     .container-flex{
         flex-direction: column;
-        text-align: center;
-
     }
     nav ul{
         flex-direction: column;

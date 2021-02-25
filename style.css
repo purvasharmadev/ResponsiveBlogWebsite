@@ -3,17 +3,25 @@ body{
     font-family:'Ubuntu',sans-serif;
     box-sizing:border-box;
     font-weight: 300;
+    border: 2px solid #142774;
 }
 img{
     max-width: 100%;
     display: block;
 }
 header{
-    text-align: center;
     background:#f8f8f8;
     padding:2em 0 ;
+    text-align: center;
+}
+footer{
+    background: #142774;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
 }
 h1,h2,h3{
+    margin-top: 0;
     font-family: 'Lora',serif;
     font-weight: 400;
     color: #143774;
@@ -26,6 +34,7 @@ h1{
     font-weight: 200;
     color:#1792d2 ;
     font-size: 0.75rem;
+    margin: 0;
     }
 
 /* TYPOGRAPHY */
@@ -39,13 +48,16 @@ h1{
     color: #1792d2;
     text-decoration: none;
     font-weight: 700;
-    letter-spacing: ;
+    /* letter-spacing: ; */
 }
 
 .article-read-more:hover,
 .article-read-more:focus{
     color: #142774;
     text-decoration: underline;
+}
+.article-info{
+    margin:2em 0 ;
 }
 /* Layout */
 /* Step -1 : See the big picture
@@ -63,28 +75,110 @@ h1{
 .container-flex{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     /* border: 2px dotted darkslateblue; */
 }
-/* main {
-    width: 75%;
+
+/* Articles */
+.article-featured{
+    border-bottom: #1792d2 1px solid; 
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+        /* border: 2px dotted darkslateblue; */
+
 }
-aside {
-    width: 25%;
-} */
+.article-recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+/* Ordering the recent articles */
+.article-recent-main{
+    order: 2;
+}
+.article-recent-secondary{
+    order: 1;
+}
+.article-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    /* border: 2px black solid; */
+}
+.widget-recent-post-title, .widget-title{
+    font-size: 1rem;
+
+}
+
+
+.widget-title{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 700;
+}
+
 
 
 /* Media Queiries */
+@media (min-width:550px){
+    .article-info{
+        text-align: left;
+    }
+}
+@media (min-width:675px){
 
-@media screen and (min-width:675px){
     .container-flex{
-        flex-direction: row;
-        /* text-align: center; */
-
+        flex-direction: row;    
     }
     main{
-        width: 100%;
+        width: 70%;
     }
     aside{
-        width: 100%;
+        width: 25%;
+        min-width: 200px;
+        margin-left: 1em;
     }
+    .article-recent{
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    .article-recent-main{
+        width:60% ;
+    }
+    .article-recent-secondary{
+        width: 35%;
+    }
+    .article-featured{
+        display: flex;
+        flex-direction: column;
+    }
+    .article-img{
+        order: -2;
+    }
+    .article-info{
+        order: -1;
+    }
+}
+/* Widgets */
+.sidebar{
+    /* border: 2px dotted green; */
+}
+.sidebar-widget{
+    border: 15px solid #efefef;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.widget-recent-post{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 1em;
+}
+.widget-recent-post:last-child{
+    border: 0;
+    margin: 0;
+}
+.widget-img{
+    order: -1;
 }
