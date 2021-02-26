@@ -9,6 +9,16 @@ img{
     max-width: 100%;
     display: block;
 }
+/* About-me */
+.image-full{
+    max-height: 300px;
+    min-width:100%;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+
 header{
     background:#f8f8f8;
     padding:2em 0 ;
@@ -26,6 +36,9 @@ h1,h2,h3{
     font-weight: 400;
     color: #143774;
   }
+
+
+
 h1{
     font-size:2rem;
     margin: 0;
@@ -116,7 +129,6 @@ h1{
     font-family: 'Ubuntu',sans-serif;
     font-weight: 700;
 }
-
 
 
 /* Media Queiries */
