@@ -132,11 +132,13 @@ h1{
     }
     main{
         width: 70%;
+        margin:2em 0;
     }
     aside{
         width: 25%;
         min-width: 200px;
         margin-left: 1em;
+        margin-top: 2em;
     }
     .article-recent{
         flex-direction:row;
@@ -160,9 +162,6 @@ h1{
     }
 }
 /* Widgets */
-.sidebar{
-    /* border: 2px dotted green; */
-}
 .sidebar-widget{
     border: 15px solid #efefef;
     margin-bottom: 2em;
